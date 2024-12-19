@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
+html,
+body {
+  margin: 0;
+}
+
+body {
+  padding: 10px;
+  font-family: "Pangolin", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background-color: black;
+  color: pink;
+  letter-spacing: 0.15em;
+}
+
+
+
+.heading {
+  font-size: 2em;
+}
+
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1em;
+  margin-top: 1em;
+}
+
+#new-game-button {
+  border: none;
+  border-radius: 5px;
+  padding: 0.5em;
+  background: pink;
+  cursor: pointer;
+  color: black;
+  text-transform: uppercase;
+  transition: opacity 0.2s ease-in-out;
+  padding: 0.5em 1.5em;
+  border-radius: 1.5em;
+  font-size: 1em;
+  font-family: inherit;
+  letter-spacing: inherit;
+}
+
+#new-game-button:hover {
+  opacity: 0.8;
+}
+
+.card {
+  width: 6em;
+  height: 7em;
+  perspective: 50em;
+  cursor: pointer;
+  background-color: pink;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 0.5em;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.card.visible .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5em;
+  box-shadow: 0.05em 0.05em 0.05em 0.05em rgba(0, 0, 0, 0.1);
+  font-size: 2.5em;
+  color: black;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  color: transparent;
+  transition: background 1s
+}
+
+.visible.red-shirt {
+  background-image: url(img/red-shirt.jpg); 
+}
+
+.visible.tail {
+  background-image: url(img/tail.jpg); 
+}
+
+.visible.blowjob {
+  background-image: url(img/blowjob.jpg); 
+}
+
+.visible.mirror {
+  background-image: url(img/mirror.jpg); 
+}
+
+.visible.blowjob2 {
+  background-image: url(img/blowjob2.jpg); 
+}
+
+.visible.bra {
+  background-image: url(img/bra.jpg); 
+}
+
+.visible.nipples {
+  background-image: url(img/nipples.jpg); 
+}
+
+.visible.small-mirror {
+  background-image: url(img/small-mirror.jpg); 
+}
+
+.visible.tail2 {
+  background-image: url(img/tail2.jpg); 
+}
+
+.visible.red-shirt2 {
+  background-image: url(img/red-shirt2.jpg); 
+}
+
+.visible.mirror_tail {
+  background-image: url(img/mirrow+tail.jpg); 
+}
+
+@media (max-width: 768px) {
+  #game-board {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  #game-board {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 420px) {
+
+  .heading,
+  #victory-message {
+    font-size: 15px;
+  }
+
+  .card {
+    width: 5em;
+    height: 5em;
+  }
+}
+
+@media (max-width: 350px) {
+  .card {
+    width: 4em;
+    height: 4em;
+  }
+}
