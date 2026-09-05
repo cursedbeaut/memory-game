@@ -39,7 +39,7 @@ function startGame() {
   CARD_VALUES.forEach(renderCard);
 
   if (VISIBLE_CARDS.length === CARDS_AMOUNT * 2) {
-    WINNING_TEXT.textContent = "ты меня нашёл, кот-пенсионер";
+    WINNING_TEXT.textContent = "ты меня нашёл, кот";
     document.body.append(START_GAME_BUTTON);
   }
 }
