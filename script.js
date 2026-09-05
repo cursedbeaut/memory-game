@@ -155,7 +155,7 @@ function handleCardClick(card) {
     // Если кол-во открытых карт равно общему кол-ву карт, то это победа
 
     const isVictory = visibleCardsNodes.length === CARDS_AMOUNT*2;
-    const victoryMessage = "ты меня нашёл, котёнок";
+    const victoryMessage = "ты меня нашёл, кот";
 
     if (isVictory) {
       WINNING_TEXT.textContent = victoryMessage;
